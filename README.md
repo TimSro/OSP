@@ -2,7 +2,7 @@
 
 
 Mitglieder:  
-Till :: Projektleiter  
+Til :: Projektleiter  
 Jonas  :: stellvertretner Projektleiter  
 Tim :: Dokumentation  
 Alexander :: Controlling  
