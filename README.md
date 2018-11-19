@@ -3,7 +3,7 @@
 
 Mitglieder:  
 Til :: Projektleiter  
-Jonas  :: stellvertretner Projektleiter  
+Jonas  :: stellvertretender Projektleiter  
 Tim :: Dokumentation  
 Alexander :: Controlling  
 Rico :: Zeitwächter  
