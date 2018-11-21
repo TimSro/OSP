@@ -1,11 +1,15 @@
 package de.gso.osp.persistence.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Unterricht {
+@Entity
+@Table(name = "fach")
+public class Fach {
 
     @Id
     @Column(unique = true, nullable = false)

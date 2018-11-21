@@ -1,10 +1,15 @@
 package de.gso.osp.persistence.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +29,9 @@ public class Benutzer {
     private String password;
 
     private boolean spgesetzt;
+    
+    private List<Fach> fächer;
+    
 
 	public Long getId() {
 		return id;
@@ -63,6 +71,19 @@ public class Benutzer {
 
 	public void setSpgesetzt(boolean spgesetzt) {
 		this.spgesetzt = spgesetzt;
+	}
+
+	 @ManyToMany
+	 @JoinTable(
+	   name="benutzer_fach",
+	   joinColumns=@JoinColumn(name="benutzer_id", referencedColumnName="id"),
+	   inverseJoinColumns=@JoinColumn(name="fach_id", referencedColumnName="id"))
+	public List<Fach> getFächer() {
+		return fächer;
+	}
+
+	public void setFächer(List<Fach> fächer) {
+		this.fächer = fächer;
 	}
 
 

@@ -17,11 +17,11 @@ public class Schüler {
     @Column(unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private Klasse klasse;
     
     @Column(unique = true, nullable = false)
     private String name;
+    
+    private Klasse klasse;
 
 	public Long getId() {
 		return id;
