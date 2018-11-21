@@ -20,6 +20,8 @@ public class Todo {
     
     private String todoString;
     
+    private String todoKey;
+    
     private boolean done;
     
     private Benutzer benutzer;
@@ -72,6 +74,14 @@ public class Todo {
 
 	public void setUnterricht(Fach unterricht) {
 		this.unterricht = unterricht;
+	}
+
+	public String getTodoKey() {
+		return todoKey;
+	}
+
+	public void setTodoKey(String todoKey) {
+		this.todoKey = todoKey;
 	}
 
 }

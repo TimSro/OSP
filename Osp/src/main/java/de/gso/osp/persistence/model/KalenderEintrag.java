@@ -23,7 +23,7 @@ public class KalenderEintrag {
 	
 	private Date datum;
 	
-	private String identKey;
+	private String kalenderKey;
 	
 	private String notiz;
 	
@@ -47,14 +47,6 @@ public class KalenderEintrag {
 
 	public void setDatum(Date datum) {
 		this.datum = datum;
-	}
-	
-	public String getUhrzeitStunde() {
-		return identKey;
-	}
-
-	public void setUhrzeitStunde(String uhrzeitStunde) {
-		this.identKey = uhrzeitStunde;
 	}
 
 	public String getNotiz() {
@@ -91,6 +83,14 @@ public class KalenderEintrag {
 
 	public void setKlasse(Klasse klasse) {
 		this.klasse = klasse;
+	}
+
+	public String getKalenderKey() {
+		return kalenderKey;
+	}
+
+	public void setKalenderKey(String kalenderKey) {
+		this.kalenderKey = kalenderKey;
 	}
 
 }
