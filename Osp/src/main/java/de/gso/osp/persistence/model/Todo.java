@@ -28,7 +28,7 @@ public class Todo {
     
     private Klasse klasse;
     
-    private Fach unterricht;
+    private Fach fach;
 
 	public String getTodoString() {
 		return todoString;
@@ -67,13 +67,13 @@ public class Todo {
 	}
 	
     @ManyToOne
-    @JoinColumn(name = "unterricht_id")
-	public Fach getUnterricht() {
-		return unterricht;
+    @JoinColumn(name = "fach_id")
+	public Fach getFach() {
+		return fach;
 	}
 
-	public void setUnterricht(Fach unterricht) {
-		this.unterricht = unterricht;
+	public void setFach(Fach fach) {
+		this.fach = fach;
 	}
 
 	public String getTodoKey() {
