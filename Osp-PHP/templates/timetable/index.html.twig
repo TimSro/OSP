@@ -6,6 +6,8 @@
             <h2>Stundenplan einfügen</h2>
         </div>
 
-        {% include 'partials/timetable.html.twig' %}
+        {% for timetable in timetables %}
+            {% include 'partials/timetable.html.twig' with {'timetable': timetable} %}
+        {% endfor %}
     </div>
 {% endblock %}

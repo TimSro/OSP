@@ -9,6 +9,14 @@
             </div>
 
             <div class="box__content">
+                {% if errors|length > 0 %}
+                    <div class="alert alert-danger">
+                        {% for error in errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
                 <form>
                     <div class="form-group">
                         <label for="usernameInput">Benutzername</label>
