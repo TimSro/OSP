@@ -6,11 +6,11 @@
  * Time: 16:18
  */
 
-namespace App\Mocks;
+namespace App\Model;
 
 use App\Interfaces\TimetableEntryInterface;
 
-class TimetableEntryMock implements TimetableEntryInterface
+class TimetableEntryModel implements TimetableEntryInterface
 {
     private $data = [
         'lesson' => null,

@@ -1,4 +1,4 @@
-<span>Montag</span>
+<span>{{ timetable.day }}</span>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -8,10 +8,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td>3.-4. Stunde</td>
-        <td>WUG</td>
-        <td>FIA6A</td>
-    </tr>
+    {% for entries in timetable.timetableEntries %}
+        <tr>
+            <td>{{ entries.lesson }}</td>
+            <td>{{ entries.subject }}</td>
+            <td>{{ entries.schoolClass }}</td>
+        </tr>
+    {% endfor %}
     </tbody>
 </table>

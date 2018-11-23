@@ -24,4 +24,14 @@ interface UserInterface
      * @return string
      */
     public function getPassword();
+
+    /**
+     * @return string
+     */
+    public function getGender();
+
+    /**
+     * @return boolean
+     */
+    public function isTimetableAvailable();
 }

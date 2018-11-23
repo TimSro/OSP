@@ -3,12 +3,10 @@
  * Created by PhpStorm.
  * User: Til Anheier
  * Date: 23.11.2018
- * Time: 14:50
+ * Time: 19:42
  */
 
 namespace App\Interfaces;
-
-use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Interface TimetableInterface
@@ -17,12 +15,12 @@ use Symfony\Component\Validator\Constraints\DateTime;
 interface TimetableInterface
 {
     /**
-     * @return DateTime
+     * @return UserInterface
      */
-    public function getDate();
+    public function getUser();
 
     /**
-     * @return TimetableEntryInterface[]
+     * @return TimetableDayInterface[]
      */
-    public function getTimetableEntries();
+    public function getTimetableDays();
 }

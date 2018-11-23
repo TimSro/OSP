@@ -3,40 +3,27 @@
  * Created by PhpStorm.
  * User: Til Anheier
  * Date: 23.11.2018
- * Time: 14:14
+ * Time: 20:27
  */
 
 namespace App\Mocks;
 
-use App\Interfaces\UserInterface;
+use App\Interfaces\MockInterface;
 
 /**
  * Class UserMock
  * @package App\Mocks
  */
-class UserMock implements UserInterface
+class UserMock implements MockInterface
 {
     /**
-     * @return string
+     * @return array
      */
-    public function getUsername()
+    public function getMocks()
     {
-        return "kn";
-    }
-
-    /**
-     * @return string
-     */
-    public function getPlainPassword()
-    {
-        return "123456";
-    }
-
-    /**
-     * @return string
-     */
-    public function getPassword()
-    {
-        return '$2y$10$M1RL87UmvPPwGAONYDrbluT/qQEhd2FVgrU.vh4b8MMw2UzgYEXJq';
+        return [
+            new FirstUserMock(),
+            new SecondUserMock(),
+        ];
     }
 }

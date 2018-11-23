@@ -6,28 +6,27 @@
  * Time: 14:50
  */
 
-namespace App\Mocks;
+namespace App\Model;
 
 use App\Interfaces\TimetableEntryInterface;
-use App\Interfaces\TimetableInterface;
-use Symfony\Component\Validator\Constraints\DateTime;
+use App\Interfaces\TimetableDayInterface;
 
 /**
- * Class TimetableInterface
+ * Class TimetableDayInterface
  * @package App\Mocks
  */
-class TimetableMock implements TimetableInterface
+class TimetableDayModel implements TimetableDayInterface
 {
     /**
      * @var array
      */
     private $data = [
-        'date' => null,
+        'day' => null,
         'timetableEntries' => null,
     ];
 
     /**
-     * TimetableMock constructor.
+     * TimetableDayModel constructor.
      * @param array $data
      */
     public function __construct(array $data)
@@ -36,11 +35,11 @@ class TimetableMock implements TimetableInterface
     }
 
     /**
-     * @return DateTime
+     * @return string
      */
-    public function getDate()
+    public function getDay()
     {
-        return $this->data['date'];
+        return $this->data['day'];
     }
 
     /**
