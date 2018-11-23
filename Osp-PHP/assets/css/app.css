@@ -1,3 +1,35 @@
-body {
-    background-color: lightgray;
+/* line 3, ../scss/05-components/_box.scss */
+.box {
+  padding: 4rem 2rem;
+  border-radius: 0.3rem;
+  background-color: #e9ecef;
+  min-width: 50%;
+  margin: auto;
+}
+/* line 10, ../scss/05-components/_box.scss */
+.box__title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 15, ../scss/05-components/_box.scss */
+.box__content {
+  padding-top: 25px;
+}
+
+/* line 1, ../scss/05-components/_screen.scss */
+.screen {
+  display: flex;
+}
+/* line 4, ../scss/05-components/_screen.scss */
+.screen__centered {
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* line 1, ../scss/05-components/_text.scss */
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
 }

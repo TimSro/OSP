@@ -1,0 +1,9 @@
+.screen {
+    display: flex;
+
+    &__centered {
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+    }
+}
