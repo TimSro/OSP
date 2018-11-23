@@ -15,6 +15,7 @@ class IndexController extends AbstractController
      * @Route("/", name="index")
      *
      * @param Request $request
+     * @param SessionInterface $session
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
     public function index(Request $request, SessionInterface $session)
