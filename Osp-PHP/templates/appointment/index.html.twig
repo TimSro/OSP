@@ -1,20 +1,96 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container">
+    <div class="page-header">
+        <h2>Kalender</h2>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <form class="form-row">
+        <div class="col-auto">
+            <div class="input-group mb-3">
+                <input type="date" class="form-control" id="chooseDate">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-auto">
+            <input type="submit" class="btn btn-default" value="Anzeigen">
+        </div>
+    </form>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/AppointmentController.php'|file_link(0) }}">src/Controller/AppointmentController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/appointment/index.html.twig'|file_link(0) }}">templates/appointment/index.html.twig</a></code></li>
-    </ul>
+    <div class="card">
+        <!-- Standard-Panel-Inhalt -->
+        <div class="card-header">
+            Montag, den <b>25.11.2018</b>
+        </div>
+
+        <!-- Tabelle -->
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Zeit</th>
+                <th>Unterricht</th>
+                <th>Notizen</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>1-2 Stunde</td>
+                <td>WUG (FIA6A)</td>
+                <td>
+                    Kopiergeld einsammeln
+                    <div class="float-right">
+                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
+                        <i class="fa fa-pencil-alt"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>3-4 Stunde</td>
+                <td>DEU (FIS7B)</td>
+                <td>
+                    Einführung in den Netzplan
+                    <div class="float-right">
+                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
+                        <i class="fa fa-pencil-alt"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr style="border-bottom: 2px solid black">
+                <th scope="row">3</th>
+                <td>5-6 Stunde</td>
+                <td>SPO (FIA6B)</td>
+                <td>
+                    Besprechung Kostenplan
+                    <div class="float-right">
+                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
+                        <i class="fa fa-pencil-alt"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>18:00 Uhr</td>
+                <td>PRIV</td>
+                <td>Sport
+                    <div class="float-right">
+                        <i class="fa fa-pencil-alt"></i>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-default btn-sm" type="button" aria-haspopup="true" aria-expanded="false">
+            Termin hinzufügen
+        </button>
+    </div>
 </div>
 {% endblock %}

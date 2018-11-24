@@ -1,17 +1,23 @@
-<span>Montag</span>
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th>Stunde</th>
-        <th>Fach</th>
-        <th>Klasse</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>3.-4. Stunde</td>
-        <td>WUG</td>
-        <td>FIA6A</td>
-    </tr>
-    </tbody>
-</table>
+<div class="card">
+    <div class="card-header">
+        <span>{{ timetable.day }}</span>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Stunde</th>
+            <th>Fach</th>
+            <th>Klasse</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entries in timetable.timetableEntries %}
+            <tr>
+                <td>{{ entries.lesson }}</td>
+                <td>{{ entries.subject }}</td>
+                <td>{{ entries.schoolClass }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div><br>
