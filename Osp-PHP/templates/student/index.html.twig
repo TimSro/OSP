@@ -6,20 +6,25 @@
             <h2>Schülerliste</h2>
         </div>
 
-        <span><strong>Klasse:</strong> {{ students.schoolClass.name }}</span>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>Schülername</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for entries in students.students %}
+        <div class="card">
+            <div class="card-header">
+                <span><strong>Klasse:</strong> {{ students.schoolClass.name }}</span>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
                 <tr>
-                    <td>{{ entries.name }}</td>
+                    <th>Schülername</th>
                 </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                {% for entries in students.students %}
+                    <tr>
+                        <td>{{ entries.name }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 {% endblock %}

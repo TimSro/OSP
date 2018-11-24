@@ -1,19 +1,23 @@
-<span>{{ timetable.day }}</span>
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th>Stunde</th>
-        <th>Fach</th>
-        <th>Klasse</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for entries in timetable.timetableEntries %}
+<div class="card">
+    <div class="card-header">
+        <span>{{ timetable.day }}</span>
+    </div>
+    <table class="table table-hover">
+        <thead>
         <tr>
-            <td>{{ entries.lesson }}</td>
-            <td>{{ entries.subject }}</td>
-            <td>{{ entries.schoolClass }}</td>
+            <th>Stunde</th>
+            <th>Fach</th>
+            <th>Klasse</th>
         </tr>
-    {% endfor %}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {% for entries in timetable.timetableEntries %}
+            <tr>
+                <td>{{ entries.lesson }}</td>
+                <td>{{ entries.subject }}</td>
+                <td>{{ entries.schoolClass }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div><br>
