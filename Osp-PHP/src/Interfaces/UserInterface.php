@@ -8,6 +8,10 @@
 
 namespace App\Interfaces;
 
+/**
+ * Interface UserInterface
+ * @package App\Interfaces
+ */
 interface UserInterface
 {
     /**
@@ -34,4 +38,19 @@ interface UserInterface
      * @return boolean
      */
     public function isTimetableAvailable();
+
+    /**
+     * @return StudentSchoolClassInterface[]
+     */
+    public function getStudentSchoolClasses();
+
+    /**
+     * @return CalendarInterface[]
+     */
+    public function getCalendars();
+
+    /**
+     * @return TodoInterface[]
+     */
+    public function getTodos();
 }

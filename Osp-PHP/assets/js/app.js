@@ -10,6 +10,8 @@ require('../css/app.css');
 
 require('../../vendor/twbs/bootstrap/dist/css/bootstrap.css');
 
+require('../../vendor/twbs/bootstrap/dist/js/bootstrap.bundle.js');
+
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 var $ = require('jquery');
 

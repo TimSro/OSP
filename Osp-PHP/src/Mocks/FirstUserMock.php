@@ -8,6 +8,9 @@
 
 namespace App\Mocks;
 
+use App\Interfaces\CalendarInterface;
+use App\Interfaces\StudentSchoolClassInterface;
+use App\Interfaces\TodoInterface;
 use App\Interfaces\UserInterface;
 
 /**
@@ -54,5 +57,29 @@ class FirstUserMock implements UserInterface
     public function isTimetableAvailable()
     {
         return false;
+    }
+
+    /**
+     * @return StudentSchoolClassInterface[]
+     */
+    public function getStudentSchoolClasses()
+    {
+        // TODO: Implement getStudentSchoolClasses() method.
+    }
+
+    /**
+     * @return CalendarInterface[]
+     */
+    public function getCalendars()
+    {
+        // TODO: Implement getCalendars() method.
+    }
+
+    /**
+     * @return TodoInterface[]
+     */
+    public function getTodos()
+    {
+        // TODO: Implement getTodos() method.
     }
 }
