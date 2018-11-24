@@ -8,6 +8,9 @@
 
 namespace App\Model;
 
+use App\Interfaces\CalendarInterface;
+use App\Interfaces\StudentSchoolClassInterface;
+use App\Interfaces\TodoInterface;
 use App\Interfaces\UserInterface;
 
 /**
@@ -16,14 +19,24 @@ use App\Interfaces\UserInterface;
  */
 class UserModel implements UserInterface
 {
+    /**
+     * @var array
+     */
     private $data = [
         'username' => null,
         'plainPassword' => null,
         'password' => null,
         'gender' => null,
         'isTimetableAvailable' => null,
+        'studentSchoolClasses' => null,
+        'calendars' => null,
+        'todos' => null,
     ];
 
+    /**
+     * UserModel constructor.
+     * @param array $data
+     */
     public function __construct(array $data)
     {
         $this->data = array_merge($this->data, $data);
@@ -67,5 +80,29 @@ class UserModel implements UserInterface
     public function isTimetableAvailable()
     {
         return $this->data['isTimetableAvailable'];
+    }
+
+    /**
+     * @return StudentSchoolClassInterface[]
+     */
+    public function getStudentSchoolClasses()
+    {
+        return $this->data['studentSchoolClasses'];
+    }
+
+    /**
+     * @return CalendarInterface[]
+     */
+    public function getCalendars()
+    {
+        return $this->data['calendars'];
+    }
+
+    /**
+     * @return TodoInterface[]
+     */
+    public function getTodos()
+    {
+        return $this->data['todos'];
     }
 }
