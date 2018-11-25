@@ -69,17 +69,17 @@ class SecondUserMock implements UserInterface
     }
 
     /**
-     * @return CalendarInterface[]
+     * @return CalendarInterface
      */
-    public function getCalendars()
+    public function getCalendar()
     {
         // TODO: Implement getCalendars() method.
     }
 
     /**
-     * @return TodoInterface[]
+     * @return TodoInterface
      */
-    public function getTodos()
+    public function getTodoList()
     {
         // TODO: Implement getTodos() method.
     }

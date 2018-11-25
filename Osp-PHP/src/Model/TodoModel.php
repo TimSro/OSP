@@ -10,6 +10,7 @@ namespace App\Model;
 
 use App\Interfaces\StudentSchoolClassInterface;
 use App\Interfaces\SubjectInterface;
+use App\Interfaces\TodoEntryInterface;
 use App\Interfaces\TodoInterface;
 use App\Interfaces\UserInterface;
 
@@ -23,12 +24,8 @@ class TodoModel implements TodoInterface
      * @var array
      */
     private $data = [
-        'todoString' => null,
-        'todoKey' => null,
-        'isDone' => null,
         'user' => null,
-        'studentSchoolClass' => null,
-        'subject' => null,
+        'todoEntries' => null,
     ];
 
     /**
@@ -41,30 +38,6 @@ class TodoModel implements TodoInterface
     }
 
     /**
-     * @return string
-     */
-    public function getTodoString()
-    {
-        return $this->data['todoString'];
-    }
-
-    /**
-     * @return string
-     */
-    public function getTodoKey()
-    {
-        return $this->data['todoKey'];
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isDone()
-    {
-        return $this->data['isDone'];
-    }
-
-    /**
      * @return UserInterface
      */
     public function getUser()
@@ -73,18 +46,10 @@ class TodoModel implements TodoInterface
     }
 
     /**
-     * @return StudentSchoolClassInterface
+     * @return TodoEntryInterface[]
      */
-    public function getStudentSchoolClass()
+    public function getTodoEntries()
     {
-        return $this->data['studentSchoolClass'];
-    }
-
-    /**
-     * @return SubjectInterface
-     */
-    public function getSubject()
-    {
-        return $this->data['subject'];
+        return $this->data['todoEntries'];
     }
 }

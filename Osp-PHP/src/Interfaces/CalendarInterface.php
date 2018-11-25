@@ -16,20 +16,6 @@ use Symfony\Component\Validator\Constraints\DateTime;
  */
 interface CalendarInterface
 {
-    /**
-     * @return DateTime
-     */
-    public function getDate();
-
-    /**
-     * @return string
-     */
-    public function getCalendarKey();
-
-    /**
-     * @return string
-     */
-    public function getNote();
 
     /**
      * @return UserInterface
@@ -37,12 +23,7 @@ interface CalendarInterface
     public function getUser();
 
     /**
-     * @return StudentSchoolClassInterface
+     * @return CalendarDayInterface[]
      */
-    public function getStudentSchoolClass();
-
-    /**
-     * @return SubjectInterface
-     */
-    public function getSubject();
+    public function getCalendarDays();
 }

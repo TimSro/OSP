@@ -2,36 +2,31 @@
 /**
  * Created by PhpStorm.
  * User: Til Anheier
- * Date: 24.11.2018
- * Time: 23:49
+ * Date: 25.11.2018
+ * Time: 22:28
  */
 
 namespace App\Model;
 
 use App\Interfaces\CalendarDayInterface;
 use App\Interfaces\CalendarEntryInterface;
-use App\Interfaces\CalendarInterface;
-use App\Interfaces\StudentSchoolClassInterface;
-use App\Interfaces\SubjectInterface;
-use App\Interfaces\UserInterface;
-use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
- * Class CalendarModel
+ * Class CalendarDayModel
  * @package App\Model
  */
-class CalendarModel implements CalendarInterface
+class CalendarDayModel implements CalendarDayInterface
 {
     /**
      * @var array
      */
     private $data = [
-        'user' => null,
+        'date' => null,
         'calendarEntries' => null,
     ];
 
     /**
-     * CalendarModel constructor.
+     * CalendarDayModel constructor.
      * @param array $data
      */
     public function __construct(array $data)
@@ -40,17 +35,17 @@ class CalendarModel implements CalendarInterface
     }
 
     /**
-     * @return UserInterface
+     * @return string
      */
-    public function getUser()
+    public function getDate()
     {
-        return $this->data['user'];
+        return $this->data['date'];
     }
 
     /**
-     * @return CalendarDayInterface[]
+     * @return CalendarEntryInterface[]
      */
-    public function getCalendarDays()
+    public function getCalendarEntries()
     {
         return $this->data['calendarEntries'];
     }

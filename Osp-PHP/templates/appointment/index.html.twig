@@ -20,72 +20,7 @@
         </div>
     </form>
 
-    <div class="card">
-        <!-- Standard-Panel-Inhalt -->
-        <div class="card-header">
-            Montag, den <b>25.11.2018</b>
-        </div>
-
-        <!-- Tabelle -->
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>#</th>
-                <th>Zeit</th>
-                <th>Unterricht</th>
-                <th>Notizen</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>1-2 Stunde</td>
-                <td>WUG (FIA6A)</td>
-                <td>
-                    Kopiergeld einsammeln
-                    <div class="float-right">
-                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
-                        <i class="fa fa-pencil-alt"></i>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>3-4 Stunde</td>
-                <td>DEU (FIS7B)</td>
-                <td>
-                    Einführung in den Netzplan
-                    <div class="float-right">
-                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
-                        <i class="fa fa-pencil-alt"></i>
-                    </div>
-                </td>
-            </tr>
-            <tr style="border-bottom: 2px solid black">
-                <th scope="row">3</th>
-                <td>5-6 Stunde</td>
-                <td>SPO (FIA6B)</td>
-                <td>
-                    Besprechung Kostenplan
-                    <div class="float-right">
-                        <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
-                        <i class="fa fa-pencil-alt"></i>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>18:00 Uhr</td>
-                <td>PRIV</td>
-                <td>Sport
-                    <div class="float-right">
-                        <i class="fa fa-pencil-alt"></i>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    {% include 'partials/calendar.html.twig' with {'calendar': calendar} %}
 
     <div class="btn-group">
         <button class="btn btn-default btn-sm" type="button" aria-haspopup="true" aria-expanded="false">

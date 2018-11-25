@@ -8,6 +8,8 @@
 
 namespace App\Model;
 
+use App\Interfaces\StudentSchoolClassInterface;
+use App\Interfaces\SubjectInterface;
 use App\Interfaces\TimetableEntryInterface;
 
 class TimetableEntryModel implements TimetableEntryInterface
@@ -32,7 +34,7 @@ class TimetableEntryModel implements TimetableEntryInterface
     }
 
     /**
-     * @return string
+     * @return SubjectInterface
      */
     public function getSubject()
     {
@@ -40,9 +42,9 @@ class TimetableEntryModel implements TimetableEntryInterface
     }
 
     /**
-     * @return string
+     * @return StudentSchoolClassInterface
      */
-    public function getSchoolClass()
+    public function getStudentSchoolClass()
     {
         return $this->data['schoolClass'];
     }

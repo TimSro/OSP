@@ -45,12 +45,12 @@ interface UserInterface
     public function getStudentSchoolClasses();
 
     /**
-     * @return CalendarInterface[]
+     * @return CalendarInterface
      */
-    public function getCalendars();
+    public function getCalendar();
 
     /**
-     * @return TodoInterface[]
+     * @return TodoInterface
      */
-    public function getTodos();
+    public function getTodoList();
 }

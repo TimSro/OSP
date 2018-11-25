@@ -20,12 +20,12 @@ interface TimetableEntryInterface
     public function getLesson();
 
     /**
-     * @return string
+     * @return SubjectInterface
      */
     public function getSubject();
 
     /**
-     * @return string
+     * @return StudentSchoolClassInterface
      */
-    public function getSchoolClass();
+    public function getStudentSchoolClass();
 }
