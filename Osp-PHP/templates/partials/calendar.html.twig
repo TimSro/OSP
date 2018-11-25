@@ -1,0 +1,50 @@
+{% if calendar != null %}
+    <div class="card">
+        <!-- Standard-Panel-Inhalt -->
+        <div class="card-header">
+            {{ calendar.date }}
+        </div>
+
+        <!-- Tabelle -->
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Zeit</th>
+                <th>Unterricht</th>
+                <th>Notizen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for entries in calendar.calendarEntries %}
+                {% if entries.calendarKey != "PRIV" %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ entries.timetableEntry.lesson }}</td>
+                        <td>{{ entries.timetableEntry.subject }} ({{ entries.timetableEntry.studentSchoolClass }})</td>
+                        <td>
+                            {{ entries.note }}
+                            <div class="float-right">
+                                <a href="{{ path('todo') }}"><i class="fa fa-plus"></i></a>
+                                <i class="fa fa-pencil-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr style="border-top: 2px solid black">
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ entries.timetableEntry.lesson }}</td>
+                        <td>{{ entries.timetableEntry.subject }} ({{ entries.timetableEntry.studentSchoolClass }})</td>
+                        <td>
+                            {{ entries.note }}
+                            <div class="float-right">
+                                <i class="fa fa-pencil-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div><br>
+{% endif %}

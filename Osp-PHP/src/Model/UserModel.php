@@ -29,8 +29,8 @@ class UserModel implements UserInterface
         'gender' => null,
         'isTimetableAvailable' => null,
         'studentSchoolClasses' => null,
-        'calendars' => null,
-        'todos' => null,
+        'calendar' => null,
+        'todoList' => null,
     ];
 
     /**
@@ -91,18 +91,18 @@ class UserModel implements UserInterface
     }
 
     /**
-     * @return CalendarInterface[]
+     * @return CalendarInterface
      */
-    public function getCalendars()
+    public function getCalendar()
     {
-        return $this->data['calendars'];
+        return $this->data['calendar'];
     }
 
     /**
-     * @return TodoInterface[]
+     * @return TodoInterface
      */
-    public function getTodos()
+    public function getTodoList()
     {
-        return $this->data['todos'];
+        return $this->data['todoList'];
     }
 }

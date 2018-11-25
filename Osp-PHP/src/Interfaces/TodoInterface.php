@@ -15,32 +15,12 @@ namespace App\Interfaces;
 interface TodoInterface
 {
     /**
-     * @return string
-     */
-    public function getTodoString();
-
-    /**
-     * @return string
-     */
-    public function getTodoKey();
-
-    /**
-     * @return boolean
-     */
-    public function isDone();
-
-    /**
      * @return UserInterface
      */
     public function getUser();
 
     /**
-     * @return StudentSchoolClassInterface
+     * @return TodoEntryInterface[]
      */
-    public function getStudentSchoolClass();
-
-    /**
-     * @return SubjectInterface
-     */
-    public function getSubject();
+    public function getTodoEntries();
 }
